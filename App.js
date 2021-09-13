@@ -1,4 +1,5 @@
 import React from 'react';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createBottomTabNavigator} from 'react-navigation-tabs' 
@@ -8,7 +9,9 @@ import ReadStoryScreen from './screens/ReadStoryScreen'
 export default class App extends React.Component {
   render(){
     return(
-      <AppContainer />
+      <SafeAreaProvider>
+        <AppContainer />
+      </SafeAreaProvider>
     );
   }
 }
